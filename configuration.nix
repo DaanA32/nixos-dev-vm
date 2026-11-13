@@ -25,11 +25,14 @@ in
     gh-copilot-cli
   ];
 
-  virtualisation.sharedDirectories = {
-    lp-framework = {
-      source = "/home/daana/git/lp-framework/";
-      # securityModel = "";
-      target = "/lp-framework";
+  virtualisation = {
+    diskSize = 1048576;
+    sharedDirectories = {
+      lp-framework = {
+        source = "/home/$USER/git/lp-framework-rs/";
+        # securityModel = "";
+        target = "/lp-framework";
+      };
     };
   };
 
